@@ -3,8 +3,8 @@
 
 # Acrylic home
 
-This is the homepage for Acrylic.
+This is the homepage for Acrylic. See it at <https://acrylic.anpang.lol/>.
 
-See it at <https://acrylic.anpang.lol/>.
+**Note that this is not Acrylic itself; that's [here](https://github.com/acrylic-os/core).**
 
 This homepage is under the MIT license, but Acrylic itself is under a different Polyform license.
