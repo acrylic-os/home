@@ -1,13 +1,20 @@
 
+
+/* body */
+
 body{
+    margin: 0;
     font-family: "Inter", sans-serif;
     background-image: url(assets/wallpaper.png);
     background-color: rgba(0, 0, 0, 0.25);
     background-blend-mode: darken;
-    background-size: cover;
+    background-size: max(100%, 75em);
+    background-position-x: center;
     color: #fff;
-    padding: 5em 7.5em;
 }
+
+
+/* elements */
 
 h1{
     font-family: "Schibsted Grotesk", sans-serif;
@@ -15,7 +22,6 @@ h1{
     letter-spacing: 0.1em;
     margin-bottom: 0.25em;
 }
-#topbox{ margin-bottom: 3em; }
 
 .button{
     display: inline-block;
@@ -31,21 +37,81 @@ h1{
     background-color: rgba(255, 255, 255, 0.05);
     color: #fff;
 }
-#middlebox{ margin-bottom: 2em; }
 
 a{
     color: #c4edff;
     text-decoration: none;
 }
 a:hover{ color: #e3f7ff }
-#bottombox{ line-height: 1.5em; }
-#bottombox > a{ margin-right: 0.5em; }
+#bottomleft > a{ margin-right: 0.5em; }
 
-#footer{
-    position: fixed;
-    right: 4em;
-    bottom: 4em;
-    color: rgba(255, 255, 255, 0.75);
-    text-align: right;
-    line-height: 1.5em;
+
+/* desktop boxes */
+
+@media all and (min-width: 721px) {
+
+    body{ padding: 5em 7.5em; }
+
+    #topleft{
+        position: fixed;
+        top: 5em;
+        left: 6em;
+    }
+    #header{ margin-bottom: 2em; }
+
+    #topright{
+        position: fixed;
+        right: 7em;
+        top: 7em;
+        text-align: right;
+    }
+    #mobilenote{ display: none; }
+
+    #bottomleft{
+        position: fixed;
+        left: 6em;
+        bottom: 6em;
+        line-height: 1.5em;
+    }
+
+    #bottomright{
+        position: fixed;
+        right: 5em;
+        bottom: 5em;
+        color: rgba(255, 255, 255, 0.75);
+        text-align: right;
+        line-height: 1.5em;
+    }
+
+}
+
+
+/* mobile boxes */
+
+@media all and (max-width: 720px) {
+
+    body{ padding: 4em 5em; }
+
+    #topleft{ margin-bottom: 1em; }
+    #topright, #bottomleft, #mobilenote{ margin-bottom: 2em; }
+    #header{ margin-bottom: 3em; }
+
+    #mobilenote{
+        display: grid;
+        grid-template-columns: 3em auto;
+        border: 4px solid rgba(255, 0, 0, 0.5);
+        background-color: rgba(255, 0, 0, 0.1);
+        border-radius: 1em;
+        padding: 1em;
+        gap: 0.75em;
+    }
+    #mobileimagebox{ position: relative; }
+    #mobileimage{
+        width: 3em;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
 }
